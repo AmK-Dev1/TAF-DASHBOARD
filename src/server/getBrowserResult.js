@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ServerConfig } from './serverConfig';
 
 export async function getBrowserData() {
     // Déclaration des variables...
@@ -15,7 +16,7 @@ export async function getBrowserData() {
     }
     try {
         // Requête Axios pour remplacer le premier appel AJAX
-        const res = await axios.get('http://localhost:3001/executions');
+        const res = await axios.get(ServerConfig.serverUrl + 'executions');
         const data = res.data;
         // Logique de traitement des données...
         taille = data.length;

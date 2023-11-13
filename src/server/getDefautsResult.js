@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ServerConfig } from './serverConfig';
 
 export async function getDefautsResult() {
     // Déclaration des variables...
@@ -14,7 +15,7 @@ export async function getDefautsResult() {
 
     try {
         // Requête Axios pour remplacer le premier appel AJAX
-        const res = await axios.get('http://localhost:3001/defauts');
+        const res = await axios.get(ServerConfig.serverUrl + 'defauts');
         const data = res.data;
         // Logique de traitement des données...
         /*  field_name = Object.keys(data[1]);

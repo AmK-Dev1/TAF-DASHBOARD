@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ServerConfig } from './serverConfig';
 
 export async function getTestResult() {
 
@@ -25,7 +26,7 @@ export async function getTestResult() {
     // Utilisez une approche moderne avec async/await et try/catch pour la gestion des erreurs
     try {
         // Requête pour 'testcategory'
-        const testCategoryResponse = await axios.get('http://localhost:3001/testcategory');
+        const testCategoryResponse = await axios.get(ServerConfig.serverUrl + 'testcategory');
         const testCategoryData = testCategoryResponse.data;
         // Traitez ici 'testCategoryData' comme nécessaire...
         testCategoryData.forEach((obj) => {
@@ -45,7 +46,7 @@ export async function getTestResult() {
         }
 
         // Requête pour 'tests'
-        const testsResponse = await axios.get('http://localhost:3001/tests/');
+        const testsResponse = await axios.get(ServerConfig.serverUrl + 'tests/');
         const testsData = testsResponse.data;
         // Traitez ici 'testsData' comme nécessaire...
 

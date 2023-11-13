@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ServerConfig } from './serverConfig';
 
 export async function getProjectResult() {
     // Déclaration des variables...
@@ -16,7 +17,7 @@ export async function getProjectResult() {
 
     try {
         // Requête Axios pour remplacer le premier appel AJAX
-        const res1 = await axios.get('http://localhost:3001/env_exec');
+        const res1 = await axios.get(ServerConfig.serverUrl + 'env_exec');
         const data1 = res1.data;
         // Logique de traitement des données...
         data1.forEach((obj) => {

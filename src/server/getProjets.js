@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ServerConfig } from './serverConfig';
 
 export async function getProjects() {
 
@@ -6,23 +7,9 @@ export async function getProjects() {
 
 
         // Requête Axios pour remplacer le deuxième appel AJAX
-        const res = await axios.get('http://localhost:3001/projects');
+        const res = await axios.get(ServerConfig.serverUrl + 'projects');
         const data = res.data;
 
-        /* [{
-            "id": 1,
-            "key": "BOOK",
-            "name": "Book Store",
-            "description": "Book Store Web App",
-            "url": "https://www.getxray.app/",
-            "state": "createPending",
-            "visibility": "public",
-            "group_id": 1,
-            "version": "0.1",
-            "revision": "1.0",
-            "environment": "Windows 10 Pro",
-            "status": "Pending"
-          }, */
 
         return (data)
     } catch (error) {

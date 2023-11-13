@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { ServerConfig } from './serverConfig';
 
 export async function getUserResult() {
     // Déclaration des variables...
@@ -14,7 +15,7 @@ export async function getUserResult() {
 
     try {
         // Requête Axios pour remplacer le premier appel AJAX
-        const res = await axios.get('http://localhost:3001/users');
+        const res = await axios.get(ServerConfig.serverUrl + 'users');
         const data = res.data;
         // Logique de traitement des données...
         taille = data.length;
