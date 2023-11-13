@@ -33,6 +33,9 @@ Suivez ces étapes pour configurer l'environnement de développement :
    ```bash
    npm start
 
+9. Modifier le fichier qui contient l URL de base du json-server (optional):
+    tafdashboard/src/server/serverConfig.js 
+
 ## Scripts disponibles
 Dans le répertoire du projet, vous pouvez également utiliser les scripts npm suivants :
 
