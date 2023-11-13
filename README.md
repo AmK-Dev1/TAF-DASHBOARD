@@ -40,4 +40,4 @@ npm start : Lance l'application en mode développement.
 npm build : Crée une version de production de l'application.
 npm test : Exécute les tests de l'application.
 npm eject : Expose la configuration interne de Create React App (utilisez-le avec prudence).
->>>>>>> 5f503c2aebe3f0b4e17f5a9a35cee4ed3f6f800f
+
