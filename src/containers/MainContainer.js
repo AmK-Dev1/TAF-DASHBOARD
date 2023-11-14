@@ -15,7 +15,7 @@ export default class MainContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: 1
+            selected: 0
         }
 
         this.navigate = this.navigate.bind(this)
