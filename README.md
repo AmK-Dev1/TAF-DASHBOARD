@@ -16,7 +16,7 @@ Suivez ces étapes pour configurer l'environnement de développement :
 1. Clonez ce dépôt depuis Git en utilisant la commande suivante dans votre terminal :
 
    ```bash
-   git clone https://github.com/AmK-Dev1/tafdashboard.git
+   git clone https://github.com/AmK-Dev1/TAF-DASHBOARD.git
 2. Accédez au répertoire du projet :
    ```bash
    cd {path} to tafdashboard
