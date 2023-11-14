@@ -7,6 +7,7 @@ import Defauts from '../components/Defauts';
 import Projets from '../components/Projets';
 import Tests from '../components/Tests';
 import login from '../components/Login';
+import Dash from '../components/Dash';
 import { Redirect } from 'react-router-dom/cjs/react-router-dom.min';
 
 export default class MainContainer extends Component {
@@ -28,6 +29,11 @@ export default class MainContainer extends Component {
     renderPage() {
         let view;
         switch (this.state.selected) {
+
+            case 0:
+                view = <Dash />
+                break;
+
             case 1:
                 view = <CasDeTest />
                 break;

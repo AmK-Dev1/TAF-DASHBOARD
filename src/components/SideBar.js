@@ -19,7 +19,7 @@ export default class SideBar extends Component {
                 <ul className="metismenu" id="menu">
                     <li>
                         <div id="link_dashboard">
-                            <a href="#" className="has-arrow">
+                            <a href="#" onClick={() => { this.props.navigate(0) }} className="has-arrow">
                                 <div className="parent-icon"><i className='bx bx-home-alt'></i>
                                 </div>
                                 <div className="menu-title">Dashboard</div>

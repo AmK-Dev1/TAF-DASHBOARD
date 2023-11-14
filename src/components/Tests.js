@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
-import { getTestCases } from '../server/getTestsCases';
+import DefautsChart from './charts/DefautsChart'
+import { getDefautsResult } from '../server/getDefautsResult';
 import TableFunc from './tables/TableFunc';
+
+import { getProjects } from '../server/getProjets';
+
+import { getTests } from '../server/getTests';
+
 
 export default class Tests extends Component {
 
@@ -17,8 +23,7 @@ export default class Tests extends Component {
 
     // GET DATA
     async componentDidMount() {
-        const ResDesTestCases = await getTestCases();
-        console.log("TEsts : ", ResDesTestCases)
+        const ResDesTestCases = await getTests();
         const columns = Object.keys(ResDesTestCases[0]).map(key => ({
             Header: key,
             accessor: key
@@ -30,6 +35,9 @@ export default class Tests extends Component {
             loading: false
         });
     }
+
+
+
     render() {
         if (this.state.loading) {
             return (
@@ -40,7 +48,7 @@ export default class Tests extends Component {
         }
         return (
             <React.Fragment>
-                <h6 className="mb-0 text-uppercase" id="label_defaut" >Liste des Cas de tests</h6>
+                <h6 className="mb-0 text-uppercase" id="label_defaut" >Liste des résultats des tests</h6>
                 <hr />
 
 
